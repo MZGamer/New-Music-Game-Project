@@ -5,11 +5,18 @@ using UnityEngine.UI;
 
 public class Editor : MusicPlayer
 {
-    public Text 
+    [Header("NoteTime")]
+    public Text NTDisplay;
+    public Text NTEdit;
+    [Header("HoldTime")]
+    public Text HTDisplay;
+    public Text HTEdit;
+    [Header("Editing")]
+    public int EditNoteID;
+    public float Time, EndTime;
 
-
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         Player_Start();
 	}
 	

@@ -2035,6 +2035,13 @@ MonoBehaviour:
   Speed: 300
   CreateHigh: 0
   ClickLine: 0
+  NTDisplay: {fileID: 1872133539}
+  NTEdit: {fileID: 1486215959}
+  HTDisplay: {fileID: 1488843057}
+  HTEdit: {fileID: 550596090}
+  EditNoteID: 0
+  Time: 0
+  EndTime: 0
 --- !u!4 &1053800374
 Transform:
   m_ObjectHideFlags: 0
