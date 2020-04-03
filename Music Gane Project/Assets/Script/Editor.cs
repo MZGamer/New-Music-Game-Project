@@ -13,7 +13,7 @@ public class Editor : MusicPlayer
     public Text HTEdit;
     [Header("Editing")]
     public int EditNoteID;
-    public float Time, EndTime;
+    public static float Time, EndTime;
 
     // Use this for initialization
     void Start () {

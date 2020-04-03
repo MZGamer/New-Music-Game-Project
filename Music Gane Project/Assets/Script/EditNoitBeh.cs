@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EditNoitBeh : NoteBehavior {
+    public int NoteID;
 
 	// Use this for initialization
 	void Start () {

@@ -168,7 +168,7 @@ Prefab:
     - target: {fileID: 224200728849282342, guid: 988a518998fbcc84389ae2356c991cc6,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 276.7
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 224200728849282342, guid: 988a518998fbcc84389ae2356c991cc6,
         type: 2}
@@ -1285,7 +1285,7 @@ Prefab:
     - target: {fileID: 224217490832112706, guid: d818de84a93012642af18dbfe1e81d31,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -204.12
+      value: -200
       objectReference: {fileID: 0}
     - target: {fileID: 224217490832112706, guid: d818de84a93012642af18dbfe1e81d31,
         type: 2}
@@ -2026,22 +2026,20 @@ MonoBehaviour:
     offset: 0
     N: []
     H: []
-  BGMPlayer: {fileID: 23126499}
-  NoteOrigin: []
-  StageTime: 0
-  NoteFile: []
+  Editor: 0
   Line1Mid: -325
   LineAndLine: 100
+  BGMPlayer: {fileID: 23126499}
   Speed: 300
-  CreateHigh: 0
-  ClickLine: 0
+  NoteTop: 300
+  NoteBottom: -200
+  NoteFile: []
+  NoteOrigin: []
   NTDisplay: {fileID: 1872133539}
   NTEdit: {fileID: 1486215959}
   HTDisplay: {fileID: 1488843057}
   HTEdit: {fileID: 550596090}
   EditNoteID: 0
-  Time: 0
-  EndTime: 0
 --- !u!4 &1053800374
 Transform:
   m_ObjectHideFlags: 0
@@ -2539,6 +2537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrivetime: 0
+  EndTime: 0
 --- !u!1 &1486215957
 GameObject:
   m_ObjectHideFlags: 0
@@ -2817,6 +2816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrivetime: 1
+  EndTime: 0
 --- !u!1 &1706434652
 GameObject:
   m_ObjectHideFlags: 0

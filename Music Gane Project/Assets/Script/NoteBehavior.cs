@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class NoteBehavior : MonoBehaviour {
-    public float arrivetime;
+    public float arrivetime,EndTime;
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        transform.localPosition = new Vector2(transform.localPosition.x, MusicPlayer.StageBottom + (arrivetime-MusicPlayer.StageTime) * (MusicPlayer.MoveSpeed) );
+    }
 	
 	// Update is called once per frame
 	public void Note_FixedUpdate () {

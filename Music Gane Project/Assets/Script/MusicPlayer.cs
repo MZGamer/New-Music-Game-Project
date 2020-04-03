@@ -3,25 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MusicPlayer : MonoBehaviour {
+    [Header("SongData")]
     public SongDifficultyCreate Data;
     public StageData Stage;
-    public AudioSource BGMPlayer;
-    public List<GameObject> NoteOrigin = new List<GameObject>();
-    public float StageTime;
-    public List<Transform> NoteFile = new List<Transform>();
     public List<List<GameObject>> NoteChker = new List<List<GameObject>>();
-    public int Line1Mid, LineAndLine;
 
-    int[] count;
+
+    [Header("StageInformation")]
+    public bool Editor;
+    public static float StageTime;
+    public int Line1Mid, LineAndLine;
+    public AudioSource BGMPlayer;
     public int Speed;
+    public float NoteTop,NoteBottom;
+    public static float StageBottom;
+    public List<Transform> NoteFile = new List<Transform>();
+    public List<GameObject> NoteOrigin = new List<GameObject>();
     public static int MoveSpeed;
-    public int CreateHigh;
-    public int ClickLine;
+    int[] count;
+
 
 
     // Use this for initialization
     public void Player_Start()
     {
+        MusicPlayer.StageBottom = NoteBottom;
         MusicPlayer.MoveSpeed = Speed;
         Music_Start();
     }
@@ -29,6 +35,7 @@ public class MusicPlayer : MonoBehaviour {
     // Update is called once per frame
     public void Player_FixedUpdate () {
         NoteCreate();
+        MusicPlayer.StageTime += Time.fixedDeltaTime;
 
     }
 
@@ -51,12 +58,12 @@ public class MusicPlayer : MonoBehaviour {
             if (count[i] < maxchk[i])
                 if(i == 0)
                 {
-                    NoteLine[i] = Stage.N.Count;
+                    NoteLine[i] = Stage.N[count[i]].line;
                     NoteTime[i] = Stage.N[count[i]].Time;
                 }
                 else
                 {
-                    NoteLine[i] = Stage.H.Count;
+                    NoteLine[i] = Stage.H[count[i]].line;
                     NoteTime[i] = Stage.H[count[i]].Time;
                 }
 
@@ -64,17 +71,29 @@ public class MusicPlayer : MonoBehaviour {
 
         for (int k = 0; k <= 1; k++)
         {
-            for (int i = count[k]; i < maxchk[k]; i++)
+            float NoteReady = NoteTime[count[k]] * (Stage.BPM / 60) - (NoteTop / MoveSpeed) + 1;
+            if (NoteReady <= StageTime)
             {
-            Ob = Instantiate(NoteOrigin[k], NoteFile[k]);
-            Ob.transform.position = new Vector2(Line1Mid + LineAndLine * NoteLine[k], Ob.transform.position.y);
-            if(k == 1)
-            {
-                Ob.transform.localScale = new Vector3(1, (Speed * (Stage.H[count[i]].EndTime - NoteTime[i])) / 100, 1);
-            }
-            NoteChker[NoteLine[k]].Add(Ob);
-            count[k] = i;
-            }
+                for (int i = count[k]; i < maxchk[k]; i++)
+                {
+
+                    Ob = Instantiate(NoteOrigin[k], NoteFile[k]);
+                    Ob.transform.position = new Vector2(Line1Mid + LineAndLine * NoteLine[k], Ob.transform.position.y);
+
+                    if (Editor)
+                    {
+                        EditNoitBeh Data = Ob.GetComponent<EditNoitBeh>();
+                        Data.NoteID = i;
+                        Data.arrivetime = NoteTime[i] * (Stage.BPM / 60) + Stage.offset;
+                    }
+                    if (k == 1)
+                    {
+                        Ob.transform.localScale = new Vector3(1, (Speed * (Stage.H[count[i]].EndTime - NoteTime[i])) / 100, 1);
+                    }
+                    NoteChker[NoteLine[k]].Add(Ob);
+                    count[k] = i;
+                }
+            }                
         }
 
 
