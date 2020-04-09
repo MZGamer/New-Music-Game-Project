@@ -44,6 +44,8 @@ public class MusicPlayer : MonoBehaviour {
         Stage = Data.Song;
         BGMPlayer.clip = Stage.BGM;
         count = new int[] { 0, 0 };
+        NoteChker.Add(new List<GameObject>() );
+        NoteChker.Add(new List<GameObject>());
     }
 
 

@@ -8,9 +8,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: New Song Difficulty Create
-  m_EditorClassIdentifier: Assembly-CSharp::SongDifficultyCreate
+  m_Script: {fileID: 11500000, guid: 728f62afa78a4144dac21a4299a536a1, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
   Song:
     SongName: 
     Author: 
@@ -18,5 +18,11 @@ MonoBehaviour:
     BGM: {fileID: 0}
     BPM: 0
     offset: 0
-    N: []
-    H: []
+    N:
+    - Time: 2
+      line: 0
+    H:
+    - Time: 2
+      line: 2
+      Miss: 0
+      EndTime: 3

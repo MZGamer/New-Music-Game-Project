@@ -445,7 +445,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2016,7 +2016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae0218562fa24b04e81ee4bbbe3b8b30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Data: {fileID: 11400000, guid: 1152b6a042d96524c9f6f365214419f6, type: 2}
+  Data: {fileID: 11400000, guid: 8a3875c3a6a70124d9c5c5063336cdef, type: 2}
   Stage:
     SongName: 
     Author: 
@@ -2033,8 +2033,12 @@ MonoBehaviour:
   Speed: 300
   NoteTop: 300
   NoteBottom: -200
-  NoteFile: []
-  NoteOrigin: []
+  NoteFile:
+  - {fileID: 2139067953}
+  - {fileID: 562452684}
+  NoteOrigin:
+  - {fileID: 1646512416}
+  - {fileID: 1481761824}
   NTDisplay: {fileID: 1872133539}
   NTEdit: {fileID: 1486215959}
   HTDisplay: {fileID: 1488843057}

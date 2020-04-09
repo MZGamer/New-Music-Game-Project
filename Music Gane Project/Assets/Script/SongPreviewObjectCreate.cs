@@ -7,9 +7,3 @@ public class SongPreviewObjectCreate : ScriptableObject {
     public SongPreview Song;
 
 }
-[CreateAssetMenu(menuName = "ScriptableObject/DiffData")]
-public class SongDifficultyCreate : ScriptableObject
-{
-    public StageData Song;
-
-}
