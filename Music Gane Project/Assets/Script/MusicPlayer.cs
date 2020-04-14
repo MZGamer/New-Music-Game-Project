@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class MusicPlayer : MonoBehaviour {
@@ -44,7 +45,9 @@ public class MusicPlayer : MonoBehaviour {
         Stage = Data.Song;
         BGMPlayer.clip = Stage.BGM;
         count = new int[] { 0, 0 };
-        NoteChker.Add(new List<GameObject>() );
+        NoteChker.Add(new List<GameObject>());
+        NoteChker.Add(new List<GameObject>());
+        NoteChker.Add(new List<GameObject>());
         NoteChker.Add(new List<GameObject>());
     }
 
@@ -90,10 +93,14 @@ public class MusicPlayer : MonoBehaviour {
                     }
                     if (k == 1)
                     {
-                        Ob.transform.localScale = new Vector3(1, (Speed * (Stage.H[count[i]].EndTime - NoteTime[i])) / 100, 1);
+                        Ob.transform.localScale = new Vector3(1, (Speed * (Stage.H[count[k]].EndTime - NoteTime[k])) / 100, 1);
                     }
+                    Debug.Log(maxchk[0]);
+                    Debug.Log(maxchk[1]);
                     NoteChker[NoteLine[k]].Add(Ob);
-                    count[k] = i;
+                    count[k] = i+1;
+                    Debug.Log(count[k]);
+                    EditorApplication.isPaused = true;
                 }
             }                
         }
