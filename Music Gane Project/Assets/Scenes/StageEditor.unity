@@ -445,7 +445,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1285,7 +1285,7 @@ Prefab:
     - target: {fileID: 224217490832112706, guid: d818de84a93012642af18dbfe1e81d31,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -200
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 224217490832112706, guid: d818de84a93012642af18dbfe1e81d31,
         type: 2}
@@ -2026,7 +2026,7 @@ MonoBehaviour:
     offset: 0
     N: []
     H: []
-  Editor: 0
+  Editor: 1
   Line1Mid: -325
   LineAndLine: 100
   BGMPlayer: {fileID: 23126499}
@@ -2537,11 +2537,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1481761824}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8575ec52cc212a9438c56757c59f1056, type: 3}
+  m_Script: {fileID: 11500000, guid: a34c57d79ee609847a978f555b07fb0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   arrivetime: 0
   EndTime: 0
+  NoteID: 0
 --- !u!1 &1486215957
 GameObject:
   m_ObjectHideFlags: 0
@@ -2816,11 +2817,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1646512416}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8575ec52cc212a9438c56757c59f1056, type: 3}
+  m_Script: {fileID: 11500000, guid: a34c57d79ee609847a978f555b07fb0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrivetime: 1
+  arrivetime: 0
   EndTime: 0
+  NoteID: 0
 --- !u!1 &1706434652
 GameObject:
   m_ObjectHideFlags: 0

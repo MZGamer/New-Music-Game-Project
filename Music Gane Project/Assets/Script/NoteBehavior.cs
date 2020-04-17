@@ -5,8 +5,8 @@ using UnityEngine;
 public class NoteBehavior : MonoBehaviour {
     public float arrivetime,EndTime;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    public void Note_Start() {
         transform.localPosition = new Vector2(transform.localPosition.x, MusicPlayer.StageBottom + (arrivetime-MusicPlayer.StageTime) * (MusicPlayer.MoveSpeed) );
     }
 	

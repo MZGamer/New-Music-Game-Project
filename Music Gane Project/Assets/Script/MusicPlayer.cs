@@ -76,31 +76,37 @@ public class MusicPlayer : MonoBehaviour {
 
         for (int k = 0; k <= 1; k++)
         {
-            float NoteReady = NoteTime[count[k]] * (Stage.BPM / 60) - (NoteTop / MoveSpeed) + 1;
+            float NoteReady = NoteTime[count[k]] * (Stage.BPM / 60) + Stage.offset  - ( (NoteTop - NoteBottom) / MoveSpeed);
             if (NoteReady <= StageTime)
             {
                 for (int i = count[k]; i < maxchk[k]; i++)
                 {
 
                     Ob = Instantiate(NoteOrigin[k], NoteFile[k]);
-                    Ob.transform.position = new Vector2(Line1Mid + LineAndLine * NoteLine[k], Ob.transform.position.y);
+                    Ob.transform.localPosition = new Vector2(Line1Mid + LineAndLine * NoteLine[k], Ob.transform.localPosition.y);
 
                     if (Editor)
                     {
-                        EditNoitBeh Data = Ob.GetComponent<EditNoitBeh>();
-                        Data.NoteID = i;
-                        Data.arrivetime = NoteTime[i] * (Stage.BPM / 60) + Stage.offset;
+                        EditNoitBeh DataID = Ob.GetComponent<EditNoitBeh>();
+                        DataID.NoteID = i;
                     }
+
+                    NoteBehavior Data = Ob.GetComponent<NoteBehavior>();
+                    Data.arrivetime = NoteTime[i] * (Stage.BPM / 60) + Stage.offset;
+                    Debug.Log("ArriveTime" + Data.arrivetime + "Ready" + NoteReady + "Now" + MusicPlayer.StageTime);
+
                     if (k == 1)
                     {
                         Ob.transform.localScale = new Vector3(1, (Speed * (Stage.H[count[k]].EndTime - NoteTime[k])) / 100, 1);
                     }
+
                     Debug.Log(maxchk[0]);
                     Debug.Log(maxchk[1]);
                     NoteChker[NoteLine[k]].Add(Ob);
                     count[k] = i+1;
                     Debug.Log(count[k]);
                     EditorApplication.isPaused = true;
+
                 }
             }                
         }

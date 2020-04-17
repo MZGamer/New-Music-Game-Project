@@ -7,7 +7,7 @@ public class EditNoitBeh : NoteBehavior {
 
 	// Use this for initialization
 	void Start () {
-		
+        Note_Start();
 	}
 	
 	// Update is called once per frame

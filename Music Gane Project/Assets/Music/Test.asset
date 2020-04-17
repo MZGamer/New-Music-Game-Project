@@ -16,7 +16,7 @@ MonoBehaviour:
     Author: 
     SongImage: {fileID: 0}
     BGM: {fileID: 0}
-    BPM: 0
+    BPM: 180
     offset: 0
     N:
     - Time: 2
