@@ -19,10 +19,10 @@ MonoBehaviour:
     BPM: 180
     offset: 0
     N:
-    - Time: 2
+    - Time: 1
       line: 0
     H:
-    - Time: 2
+    - Time: 1.25
       line: 2
       Miss: 0
-      EndTime: 3
+      EndTime: 1.5

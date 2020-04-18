@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NoteBehavior : MonoBehaviour {
     public float arrivetime,EndTime;
+    public bool isHold;
 
     // Use this for initialization
     public void Note_Start() {
@@ -12,7 +13,7 @@ public class NoteBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	public void Note_FixedUpdate () {
-        transform.localPosition = new Vector2(transform.localPosition.x,transform.localPosition.y-(MusicPlayer.MoveSpeed)*Time.deltaTime);
+        transform.localPosition = new Vector2(transform.localPosition.x, MusicPlayer.StageBottom + (arrivetime - MusicPlayer.StageTime) * (MusicPlayer.MoveSpeed));
 
 	}
 

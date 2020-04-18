@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EditNoitBeh : NoteBehavior {
-    public int NoteID;
+    public int NoteIDonLine;
+    public int NoteIDinStageData;
+    public Note NoteData;
 
 	// Use this for initialization
 	void Start () {
@@ -15,8 +17,17 @@ public class EditNoitBeh : NoteBehavior {
         Note_FixedUpdate();
 	}
 
-    public void BottomEvent()
+    public void BottomBeh()
     {
+        Editor.EditingNoteIDonLine = NoteIDonLine;
+        Editor.EditingData = NoteData;
+        Editor.EditingNoteIDinStage = NoteIDinStageData;
+        if (isHold)
+            Editor.HoldInd = true;
+        else
+            Editor.HoldInd = false;
+
 
     }
+
 }

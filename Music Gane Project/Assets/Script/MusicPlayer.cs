@@ -12,6 +12,7 @@ public class MusicPlayer : MonoBehaviour {
 
     [Header("StageInformation")]
     public bool Editor;
+    public bool Pause;
     public static float StageTime;
     public int Line1Mid, LineAndLine;
     public AudioSource BGMPlayer;
@@ -22,6 +23,7 @@ public class MusicPlayer : MonoBehaviour {
     public List<GameObject> NoteOrigin = new List<GameObject>();
     public static int MoveSpeed;
     int[] count;
+    int temp;
 
 
 
@@ -36,7 +38,8 @@ public class MusicPlayer : MonoBehaviour {
     // Update is called once per frame
     public void Player_FixedUpdate () {
         NoteCreate();
-        MusicPlayer.StageTime += Time.fixedDeltaTime;
+        if(!Pause)
+            MusicPlayer.StageTime += Time.fixedDeltaTime;
 
     }
 
@@ -88,7 +91,12 @@ public class MusicPlayer : MonoBehaviour {
                     if (Editor)
                     {
                         EditNoitBeh DataID = Ob.GetComponent<EditNoitBeh>();
-                        DataID.NoteID = i;
+                        DataID.NoteIDonLine = NoteChker[NoteLine[k]].Count;
+                        if (k == 1)
+                            DataID.NoteData = Stage.H[count[k]];
+                        else
+                            DataID.NoteData = Stage.N[count[k]];
+                        DataID.NoteIDinStageData = count[k];
                     }
 
                     NoteBehavior Data = Ob.GetComponent<NoteBehavior>();
@@ -97,22 +105,33 @@ public class MusicPlayer : MonoBehaviour {
 
                     if (k == 1)
                     {
+                        Data.isHold = true;
                         Ob.transform.localScale = new Vector3(1, (Speed * (Stage.H[count[k]].EndTime - NoteTime[k])) / 100, 1);
                     }
-
-                    Debug.Log(maxchk[0]);
-                    Debug.Log(maxchk[1]);
                     NoteChker[NoteLine[k]].Add(Ob);
                     count[k] = i+1;
-                    Debug.Log(count[k]);
-                    EditorApplication.isPaused = true;
 
                 }
             }                
+        }      
+    }
+
+    public string NumberAddZero(int ReadyToAdd , int Count)
+    {
+        string AddZero = "";
+        int Checker = ReadyToAdd,LessZero = 0;
+        while (Checker/10 != 0)
+        {
+            Checker = Checker / 10;
+            LessZero ++;
         }
-
-
-      
-    } 
+        Count -= (LessZero + 1);
+        for(int i = 0;i<Count; i++)
+        {
+            AddZero += "0";
+        }
+        AddZero += ReadyToAdd.ToString();
+        return AddZero;
+    }
 
 }
