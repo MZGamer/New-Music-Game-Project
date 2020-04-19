@@ -150,7 +150,7 @@ public class MusicPlayer : MonoBehaviour {
 
     public int CreatePreBeat(int count ,GameObject OB , Transform TS)
     {
-        if ((count * 0.25 * (Stage.BPM / 60) + Stage.offset) - ((NoteTop - NoteBottom) / MoveSpeed) < StageTime)
+        if ((count * 0.25 * (Stage.BPM / 60) + Stage.offset) - ((NoteTop - NoteBottom) / MoveSpeed) <= StageTime)
         {
             count++;
             GameObject Create =  Instantiate(OB, TS);

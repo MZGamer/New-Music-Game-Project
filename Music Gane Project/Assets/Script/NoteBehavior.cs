@@ -16,13 +16,23 @@ public class NoteBehavior : MonoBehaviour {
 
     // Use this for initialization
     public void Note_Start() {
-        transform.localPosition = new Vector2(transform.localPosition.x, MusicPlayer.StageBottom + (arrivetime-MusicPlayer.StageTime) * (MusicPlayer.MoveSpeed) );
+        Move();
     }
 	
 	// Update is called once per frame
 	public void Note_FixedUpdate () {
-        transform.localPosition = new Vector2(transform.localPosition.x, MusicPlayer.StageBottom + (arrivetime - MusicPlayer.StageTime) * (MusicPlayer.MoveSpeed) );
+        if (isHold && EndTime - MusicPlayer.StageTime > -1)
+            Move();
+        else if (arrivetime - MusicPlayer.StageTime > -1 && !isHold)
+            Move();
+        else
+            transform.localPosition = new Vector2(transform.localPosition.x, -1500);
 
-	}
+    }
+
+    public void Move()
+    {
+        transform.localPosition = new Vector2(transform.localPosition.x, MusicPlayer.StageBottom + (arrivetime - MusicPlayer.StageTime) * (MusicPlayer.MoveSpeed));
+    }
 
 }

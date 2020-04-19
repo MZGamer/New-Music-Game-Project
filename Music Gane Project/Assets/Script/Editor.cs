@@ -12,10 +12,10 @@ public class Editor : MusicPlayer
     public Scrollbar TimeControl;
     [Header("NoteTime")]
     public Text NTDisplay;
-    public Text NTEdit;
+    public InputField NTEdit;
     [Header("HoldTime")]
     public Text HTDisplay;
-    public Text HTEdit;
+    public InputField HTEdit;
     [Header("Editing")]
     public int LineSlect;
 
@@ -57,8 +57,17 @@ public class Editor : MusicPlayer
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Pause = false;
-            BGMPlayer.time = StageTime + 1;
-            BGMPlayer.Play();
+            if (StageTime < 0)
+            {
+                BGMPlayer.time = 0;
+                BGMPlayer.PlayDelayed(0 - StageTime);
+            }
+            else
+            {
+                BGMPlayer.time = StageTime;
+                BGMPlayer.Play();
+            }
+
         }
         DisPlayDataUpdate();
 
@@ -98,6 +107,7 @@ public class Editor : MusicPlayer
                 HTDisplay.text = "" + ((EditingData as Hold).EndTime - EditingData.Time).ToString();
                 HTEdit.text = HTDisplay.text;
             }
+            DataChange = false;
         }
 
         if ((BGMPlayer.clip.length + 1) / (StageTime + 1) > 0 || (BGMPlayer.clip.length + 1) / (StageTime + 1) < 1)
@@ -107,6 +117,19 @@ public class Editor : MusicPlayer
             else
                 StageTime = (BGMPlayer.clip.length * TimeControl.value) - 1;
         }
+        if(Input.GetAxis("Mouse ScrollWheel") > 0)
+        {
+            Pause = true;
+            BGMPlayer.Pause();
+            TimeControl.value += 0.001f;
+        }
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0)
+        {
+            Pause = true;
+            BGMPlayer.Pause();
+            TimeControl.value -= 0.001f;
+        }
+
 
 
     }
@@ -154,6 +177,7 @@ public class Editor : MusicPlayer
         {
             Data.isHold = true;
             Ob.transform.localScale = new Vector3(1, (Speed * (NoteData.EndTime - NoteData.Time)) / 100, 1);
+            Data.EndTime = NoteData.EndTime * (Stage.BPM / 60) + Stage.offset;
         }
 
         NoteChker[LineSlect].Add(Ob);
@@ -249,7 +273,6 @@ public class Editor : MusicPlayer
             {
                 endtimeST = HTDisplay.text;
             }
-            Debug.Log(ARTime + "  " +NTDisplay.text + "  " + endtimeST + "  "+ HTDisplay.text);
 
             float arrivetime = float.Parse(ARTime, System.Globalization.NumberStyles.AllowDecimalPoint);
 

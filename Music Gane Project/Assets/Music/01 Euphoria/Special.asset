@@ -17,6 +17,28 @@ MonoBehaviour:
     SongImage: {fileID: 0}
     BGM: {fileID: 8300000, guid: 9c291bfa21a9bbe4f9d84bc748424408, type: 3}
     BPM: 120
-    offset: 3.9
-    N: []
-    H: []
+    offset: 3.955
+    N:
+    - Time: 0.1875
+      line: 1
+    - Time: 0.4375
+      line: 2
+    - Time: 0.6875
+      line: 2
+    H:
+    - Time: 0
+      line: 0
+      Miss: 0
+      EndTime: 0.4375
+    - Time: 0.25
+      line: 3
+      Miss: 0
+      EndTime: 0.4375
+    - Time: 0.5
+      line: 1
+      Miss: 0
+      EndTime: 0.9375
+    - Time: 0.75
+      line: 3
+      Miss: 0
+      EndTime: 0.9375
