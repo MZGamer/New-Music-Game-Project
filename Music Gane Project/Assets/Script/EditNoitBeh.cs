@@ -15,7 +15,9 @@ public class EditNoitBeh : NoteBehavior {
 	// Update is called once per frame
 	void FixedUpdate () {
         Note_FixedUpdate();
-	}
+        if(isHold)
+            transform.localScale = new Vector3(1, (MusicPlayer.MoveSpeed * (EndTime - arrivetime)) / 100, 1);
+    }
 
     public void BottomBeh()
     {
@@ -27,7 +29,8 @@ public class EditNoitBeh : NoteBehavior {
         else
             Editor.HoldInd = false;
 
-
+        Editor.DataChange = true;
+        Editor.Slected = true;
     }
 
 }

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 222683178873737908}
   - component: {fileID: 114698780218358694}
   - component: {fileID: 114442271302386842}
+  - component: {fileID: 114877769890520760}
   m_Layer: 5
   m_Name: EditNote
   m_TagString: Untagged
@@ -67,7 +68,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114698780218358694}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114877769890520760}
+        m_MethodName: BottomBeh
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114698780218358694
@@ -97,6 +109,25 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114877769890520760
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1131373262258274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a34c57d79ee609847a978f555b07fb0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrivetime: 0
+  EndTime: 0
+  isHold: 0
+  NoteIDonLine: 0
+  NoteIDinStageData: 0
+  NoteData:
+    Time: 0
+    line: 0
 --- !u!222 &222683178873737908
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -119,6 +150,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -325, y: 0}
+  m_AnchoredPosition: {x: -325, y: 300}
   m_SizeDelta: {x: 109, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}

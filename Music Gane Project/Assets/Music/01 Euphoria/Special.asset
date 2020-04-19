@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728f62afa78a4144dac21a4299a536a1, type: 3}
+  m_Name: Special
+  m_EditorClassIdentifier: 
+  Song:
+    SongName: "\u30E6\u30FC\u30D5\u30A9\u30EA\u30A2"
+    Author: "\u3058\u3093"
+    SongImage: {fileID: 0}
+    BGM: {fileID: 8300000, guid: 9c291bfa21a9bbe4f9d84bc748424408, type: 3}
+    BPM: 120
+    offset: 3.9
+    N: []
+    H: []
