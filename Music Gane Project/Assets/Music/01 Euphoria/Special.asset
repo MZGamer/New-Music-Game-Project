@@ -42,3 +42,7 @@ MonoBehaviour:
       line: 3
       Miss: 0
       EndTime: 0.9375
+    - Time: 1
+      line: 2
+      Miss: 0
+      EndTime: 1.4375

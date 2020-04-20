@@ -1900,6 +1900,7 @@ MonoBehaviour:
   LineAndLine: 100
   BGMPlayer: {fileID: 23126499}
   Speed: 500
+  HoldSizeDis: 100
   NoteTop: 300
   NoteBottom: -200
   Started: 0

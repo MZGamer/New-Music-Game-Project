@@ -38,7 +38,6 @@ public class Editor : MusicPlayer
     // Use this for initialization
     void Start () {
         Player_Start();
-        MusicPlayer.StageTime = -1;
 
         DataChange = false;
         NoteIDonLine = 0;
@@ -279,6 +278,11 @@ public class Editor : MusicPlayer
 
             if (EditingisHold)
             {
+                if(endtimeST == "0" || endtimeST == "")
+                {
+                    endtimeST = 0.25F.ToString();
+                    HTEdit.text = "0.25";
+                }
                 float endtime = float.Parse(endtimeST, System.Globalization.NumberStyles.AllowDecimalPoint);
                 Stage.H[NoteIDinStage].Time = arrivetime;
                 Stage.H[NoteIDinStage].EndTime = arrivetime + endtime;

@@ -24,6 +24,8 @@ public class MusicPlayer : MonoBehaviour {
     public int Line1Mid, LineAndLine;
     public AudioSource BGMPlayer;
     public int Speed;
+    public static float HoldSize;
+    public float HoldSizeDis;
     public float NoteTop,NoteBottom;
     public static float StageBottom;
     public static int MoveSpeed;
@@ -34,10 +36,13 @@ public class MusicPlayer : MonoBehaviour {
     int temp;
 
     // Use this for initialization
+
     public void Player_Start()
     {
-        MusicPlayer.StageBottom = NoteBottom;
-        MusicPlayer.MoveSpeed = Speed;
+        HoldSize = HoldSizeDis;
+        StageTime = -1;
+        StageBottom = NoteBottom;
+        MoveSpeed = Speed;
         Music_Start();
     
     }
@@ -46,7 +51,7 @@ public class MusicPlayer : MonoBehaviour {
     public void Player_FixedUpdate () {
         NoteCreate();
         if(!Pause)
-            MusicPlayer.StageTime += Time.fixedDeltaTime;
+            StageTime += Time.fixedDeltaTime;
 
         
         CreatePerBeatCount[0] = CreatePreBeat(CreatePerBeatCount[0], CreatePerBeatOrigin[0], CreatePerBeatFile[0]);
@@ -120,7 +125,7 @@ public class MusicPlayer : MonoBehaviour {
                     {
                         Data.isHold = true;
                         Data.EndTime = (Stage.H[count[k]].EndTime) * (Stage.BPM / 60) + Stage.offset;
-                        Ob.transform.localScale = new Vector3(1, ( Speed * ( (Stage.H[count[k]].EndTime - NoteTime[k])) * (Stage.BPM / 60) ) / 100, 1);
+                        Ob.transform.localScale = new Vector3(Ob.transform.localScale.x, ( Speed * ( (Stage.H[count[k]].EndTime - NoteTime[k])) * (Stage.BPM / 60) ) / HoldSize, 1);
                     }
                     NoteChker[NoteLine[k]].Add(Ob);
 
