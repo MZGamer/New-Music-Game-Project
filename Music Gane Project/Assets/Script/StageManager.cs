@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class StageManager : MusicPlayer
 {
-
+    [Header("KeySetting")]
+    public List<KeyCode> Click  = new List<KeyCode>();
 	// Use this for initialization
 	void Start () {
         Player_Start();
@@ -15,4 +16,6 @@ public class StageManager : MusicPlayer
         Player_FixedUpdate();
 
     }
+
+    
 }

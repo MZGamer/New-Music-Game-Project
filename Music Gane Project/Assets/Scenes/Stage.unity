@@ -443,14 +443,14 @@ MonoBehaviour:
   CreatePerBeatFile:
   - {fileID: 345075334}
   CreatePerBeatOrigin:
-  - {fileID: 1306521104743936, guid: 1797fa1bc413c6646b41c4c4f90946a0, type: 2}
+  - {fileID: 1710996400209372, guid: 7f1cac088af2f3747924b24d536f0da8, type: 2}
   CreatePerBeatCount: 00000000
   Editor: 0
   Pause: 0
   Line1Mid: -3
   LineAndLine: 2
   BGMPlayer: {fileID: 1278654871}
-  Speed: 15
+  Speed: 30
   HoldSizeDis: 1
   NoteTop: 30.34
   NoteBottom: 5.34
