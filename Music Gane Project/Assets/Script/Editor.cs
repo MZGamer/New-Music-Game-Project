@@ -61,6 +61,10 @@ public class Editor : MusicPlayer
                 BGMPlayer.time = 0;
                 BGMPlayer.PlayDelayed(0 - StageTime);
             }
+            else if (StageTime >= Stage.BGM.length)
+            {
+
+            }
             else
             {
                 BGMPlayer.time = StageTime;
@@ -76,7 +80,10 @@ public class Editor : MusicPlayer
         {
             Delete();
         }
-
+        if (Input.GetKeyDown(KeyCode.UpArrow) && StageTime <Stage.BGM.length)
+            MoveTimewithKey(1);
+        else if (Input.GetKeyDown(KeyCode.DownArrow) && StageTime > 0)
+            MoveTimewithKey(-1);
 
     }
     void DisPlayDataUpdate()
@@ -314,4 +321,42 @@ public class Editor : MusicPlayer
         }
 
     }
+
+    public void MoveTime(int k)
+    {
+        if(k == 0)
+        {
+            Pause = true;
+            BGMPlayer.Pause();
+            StageTime = 0;
+            BGMPlayer.time = 0;
+            TimeControl.value = (StageTime) / (BGMPlayer.clip.length);
+
+        }
+        else if (k == 1)
+        {
+            Pause = true;
+            BGMPlayer.Pause();
+            StageTime = Stage.BGM.length;
+            BGMPlayer.time = StageTime;
+            TimeControl.value = (StageTime) / (BGMPlayer.clip.length);
+
+        }
+    }
+    public void MoveTimewithKey(int i)
+    {
+        Pause = true;
+        BGMPlayer.Pause();
+        float BGMTime = (StageTime - Stage.offset) / RealTime;
+        float ChangeTime = new float();
+        if (Mathf.Abs(BGMTime % 0.25f) <= 0.0001)
+            ChangeTime = ( (BGMTime / 0.25f) + i ) * 0.25f;
+        else
+            ChangeTime = ( (int)(BGMTime / 0.25f) + i) * 0.25f;
+        StageTime = ChangeTime * RealTime + Stage.offset;
+        BGMPlayer.time = StageTime;
+        TimeControl.value = (StageTime) / (BGMPlayer.clip.length);
+
+    }
+
 }
