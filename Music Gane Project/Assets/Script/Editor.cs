@@ -240,6 +240,9 @@ public class Editor : MusicPlayer
                 }
             }
 
+            #if UNITY_EDITOR
+                UnityEditor.AssetDatabase.Refresh();
+            #endif
         }
 
         Data.Song.N = Stage.N;

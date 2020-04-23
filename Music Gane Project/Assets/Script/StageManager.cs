@@ -21,7 +21,7 @@ public class StageManager : MusicPlayer
     {
         for(int i = 0; i < 4; i++)
         {
-            if (true)
+            if (Input.GetKeyDown(Click[i]))
             {
 
             }
