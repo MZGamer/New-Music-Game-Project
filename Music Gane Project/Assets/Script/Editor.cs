@@ -35,8 +35,6 @@ public class Editor : MusicPlayer
     public GameObject Editing;
     public static bool DataChange;
     public static bool Slected;
-
-    public float RealTime;
     // Use this for initialization
     void Start () {
         Player_Start();
@@ -45,7 +43,6 @@ public class Editor : MusicPlayer
         NoteIDonLine = 0;
         EditingData = new Note();
         Slected = false;
-        RealTime = (240F / Stage.BPM);
 	}
 	
 	// Update is called once per frame
@@ -174,12 +171,12 @@ public class Editor : MusicPlayer
 
 
         NoteBehavior Data = Ob.GetComponent<NoteBehavior>();
-        Data.arrivetime = NoteData.Time * (RealTime) + Stage.offset;
+        Data.arrivetime = NoteData.Time * RealTime + Stage.offset;
         if (isHold == 1)
         {
             Data.isHold = true;
             Ob.transform.localScale = new Vector3(1, (Speed * (NoteData.EndTime - NoteData.Time)) / 100, 1);
-            Data.EndTime = NoteData.EndTime * (RealTime) + Stage.offset;
+            Data.EndTime = NoteData.EndTime * RealTime + Stage.offset;
         }
 
         NoteChker[LineSlect].Add(Ob);

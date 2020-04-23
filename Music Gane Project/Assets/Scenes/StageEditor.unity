@@ -1873,7 +1873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae0218562fa24b04e81ee4bbbe3b8b30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Data: {fileID: 11400000, guid: 5a8e2e3ae0f4a98408ce8aaa2872bf05, type: 2}
+  Data: {fileID: 11400000, guid: ace66aafc7bc0b0458649644099d52ca, type: 2}
   Stage:
     SongName: 
     Author: 
@@ -1904,6 +1904,7 @@ MonoBehaviour:
   NoteTop: 300
   NoteBottom: -200
   Started: 0
+  RealTime: 0
   EditTime: {fileID: 243547429}
   BPMCUT: {fileID: 1338144833}
   LineSlectDisplay: {fileID: 1918495171}

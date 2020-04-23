@@ -34,6 +34,7 @@ public class MusicPlayer : MonoBehaviour {
     public bool Started = false;
 
     int temp;
+    public float RealTime;
 
     // Use this for initialization
 
@@ -44,7 +45,8 @@ public class MusicPlayer : MonoBehaviour {
         StageBottom = NoteBottom;
         MoveSpeed = Speed;
         Music_Start();
-    
+
+
     }
 
     // Update is called once per frame
@@ -70,6 +72,7 @@ public class MusicPlayer : MonoBehaviour {
 
         maxchk = new int[] { Stage.N.Count, Stage.H.Count };
 
+        RealTime = (240F / Stage.BPM);
         BGMPlayer.PlayDelayed(1);
     }
 
@@ -98,7 +101,7 @@ public class MusicPlayer : MonoBehaviour {
         //Debug.Log("NextGenerate: Note: Line " + NoteLine[0] + " Time " + NoteTime[0] + " Hold: Line " + NoteLine[1] + " Time " + NoteTime[1]);
         for (int k = 0; k <= 1; k++)
         {
-            float NoteReady = ( NoteTime[k] * (Stage.BPM / 60) + Stage.offset )  - ( (NoteTop - NoteBottom) / MoveSpeed);
+            float NoteReady = ( NoteTime[k] * (RealTime) + Stage.offset )  - ( (NoteTop - NoteBottom) / MoveSpeed);
             if (NoteReady <= StageTime)
             {
                 if (count[k]< maxchk[k])
@@ -119,13 +122,13 @@ public class MusicPlayer : MonoBehaviour {
                     }
 
                     NoteBehavior Data = Ob.GetComponent<NoteBehavior>();
-                    Data.arrivetime = NoteTime[k] * (Stage.BPM / 60) + Stage.offset;
+                    Data.arrivetime = NoteTime[k] * (RealTime) + Stage.offset;
 
                     if (k == 1)
                     {
                         Data.isHold = true;
-                        Data.EndTime = (Stage.H[count[k]].EndTime) * (Stage.BPM / 60) + Stage.offset;
-                        Ob.transform.localScale = new Vector3(Ob.transform.localScale.x, ( Speed * ( (Stage.H[count[k]].EndTime - NoteTime[k])) * (Stage.BPM / 60) ) / HoldSize, 1);
+                        Data.EndTime = (Stage.H[count[k]].EndTime) * (RealTime) + Stage.offset;
+                        Ob.transform.localScale = new Vector3(Ob.transform.localScale.x, ( Speed * ( (Stage.H[count[k]].EndTime - NoteTime[k])) * (RealTime) ) / HoldSize, 1);
                     }
                     NoteChker[NoteLine[k]].Add(Ob);
 
@@ -155,10 +158,10 @@ public class MusicPlayer : MonoBehaviour {
 
     public int CreatePreBeat(int count ,GameObject OB , Transform TS)
     {
-        if (count * 0.25 * (Stage.BPM / 60)  + Stage.offset - ((NoteTop - NoteBottom) / MoveSpeed) <= StageTime)
+        if (count * 0.25 * (RealTime)  + Stage.offset - ((NoteTop - NoteBottom) / MoveSpeed) <= StageTime)
         {
             GameObject Create =  Instantiate(OB, TS);
-            Create.GetComponent<NoteBehavior>().arrivetime = (float)(count * 0.25 * (Stage.BPM / 60) + Stage.offset);
+            Create.GetComponent<NoteBehavior>().arrivetime = (float)(count * 0.25 * (RealTime) + Stage.offset);
             count++;
         }
         return count;
