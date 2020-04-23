@@ -424,7 +424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4f5bad19963dd14e83d5103c489bf44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Data: {fileID: 11400000, guid: 5a8e2e3ae0f4a98408ce8aaa2872bf05, type: 2}
+  Data: {fileID: 11400000, guid: 8a7c73f7098451c49b4ffbccb0538cee, type: 2}
   Stage:
     SongName: 
     Author: 
@@ -455,6 +455,8 @@ MonoBehaviour:
   NoteTop: 30.34
   NoteBottom: 5.34
   Started: 0
+  RealTime: 0
+  Click: 
 --- !u!4 &1278654870
 Transform:
   m_ObjectHideFlags: 0
