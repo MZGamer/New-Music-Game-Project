@@ -35,6 +35,8 @@ public class Editor : MusicPlayer
     public GameObject Editing;
     public static bool DataChange;
     public static bool Slected;
+
+    public float RealTime;
     // Use this for initialization
     void Start () {
         Player_Start();
@@ -43,6 +45,7 @@ public class Editor : MusicPlayer
         NoteIDonLine = 0;
         EditingData = new Note();
         Slected = false;
+        RealTime = (240F / Stage.BPM);
 	}
 	
 	// Update is called once per frame
@@ -79,7 +82,7 @@ public class Editor : MusicPlayer
     void DisPlayDataUpdate()
     {
         EditTime.text = "SongTime:" + NumberAddZero((int)MusicPlayer.StageTime / 60, 2) + ":" + NumberAddZero((int)MusicPlayer.StageTime % 60, 2);
-        BPMCUT.text = "(" + ((MusicPlayer.StageTime - Stage.offset) / (Stage.BPM / 60)).ToString("F4") + ")";
+        BPMCUT.text = "(" + ((MusicPlayer.StageTime - Stage.offset) / (RealTime)).ToString("F4") + ")";
         LineSlectDisplay.text = "LineSlect : " + LineSlect;
     }
     void EditorDataUpdate()
@@ -141,7 +144,7 @@ public class Editor : MusicPlayer
         GameObject Ob = Instantiate(NoteOrigin[isHold], NoteFile[isHold]);
         Hold NoteData = new Hold();
         NoteData.line = LineSlect;
-        NoteData.Time = (MusicPlayer.StageTime - Stage.offset) / (Stage.BPM / 60);
+        NoteData.Time = (MusicPlayer.StageTime - Stage.offset) / (RealTime);
         if (isHold == 1)
         {
             NoteData.EndTime = NoteData.Time + 0.25f;
@@ -171,12 +174,12 @@ public class Editor : MusicPlayer
 
 
         NoteBehavior Data = Ob.GetComponent<NoteBehavior>();
-        Data.arrivetime = NoteData.Time * (Stage.BPM / 60) + Stage.offset;
+        Data.arrivetime = NoteData.Time * (RealTime) + Stage.offset;
         if (isHold == 1)
         {
             Data.isHold = true;
             Ob.transform.localScale = new Vector3(1, (Speed * (NoteData.EndTime - NoteData.Time)) / 100, 1);
-            Data.EndTime = NoteData.EndTime * (Stage.BPM / 60) + Stage.offset;
+            Data.EndTime = NoteData.EndTime * (RealTime) + Stage.offset;
         }
 
         NoteChker[LineSlect].Add(Ob);
@@ -238,24 +241,28 @@ public class Editor : MusicPlayer
     }
     public void Delete()
     {
-        int HoldInd = 0;
-        NoteChker[EditingData.line][NoteIDonLine] = null;
-        Destroy(Editing);
-        if (EditingisHold)
-            HoldInd = 1;
-        maxchk[HoldInd]--;
-        count[HoldInd]--;
-        if (EditingisHold)
+        if (Slected)
         {
-            Stage.H.Remove(Stage.H[NoteIDinStage]);
+            int HoldInd = 0;
+            NoteChker[EditingData.line][NoteIDonLine] = null;
+            Destroy(Editing);
+            if (EditingisHold)
+                HoldInd = 1;
+            maxchk[HoldInd]--;
+            count[HoldInd]--;
+            if (EditingisHold)
+            {
+                Stage.H.Remove(Stage.H[NoteIDinStage]);
+            }
+            else
+            {
+                Stage.N.Remove(Stage.N[NoteIDinStage]);
+            }
+            Data.Song.N = Stage.N;
+            Data.Song.H = Stage.H;
+            Slected = false;
         }
-        else
-        {
-            Stage.N.Remove(Stage.N[NoteIDinStage]);
-        }
-        Data.Song.N = Stage.N;
-        Data.Song.H = Stage.H;
-        Slected = false;
+
     }
 
     public void EditNote()
@@ -286,14 +293,14 @@ public class Editor : MusicPlayer
                 float endtime = float.Parse(endtimeST, System.Globalization.NumberStyles.AllowDecimalPoint);
                 Stage.H[NoteIDinStage].Time = arrivetime;
                 Stage.H[NoteIDinStage].EndTime = arrivetime + endtime;
-                Data.EndTime = (arrivetime + endtime) * (Stage.BPM / 60) + Stage.offset;
+                Data.EndTime = (arrivetime + endtime) * (RealTime) + Stage.offset;
             }
             else
             {
                 Stage.N[NoteIDinStage].Time = arrivetime;
             }
 
-            Data.arrivetime = arrivetime * (Stage.BPM / 60) + Stage.offset;
+            Data.arrivetime = arrivetime * (RealTime) + Stage.offset;
             DataChange = true;
         }
 

@@ -17,5 +17,15 @@ public class StageManager : MusicPlayer
 
     }
 
+    void ClickChk()
+    {
+        for(int i = 0; i < 4; i++)
+        {
+            if (true)
+            {
+
+            }
+        }
+    }
     
 }
