@@ -7,7 +7,7 @@ public class MusicPlayer : MonoBehaviour {
     [Header("SongData")]
     public SongDifficultyCreate Data;
     public StageData Stage;
-    public List<List<GameObject>> NoteChker = new List<List<GameObject>>();
+    public List<List<NoteBehavior>> NoteChker = new List<List<NoteBehavior>>();
 
     [Header("ObjectNeedCreate")]
     public List<Transform> NoteFile = new List<Transform>();
@@ -65,10 +65,10 @@ public class MusicPlayer : MonoBehaviour {
         Stage = Data.Song;
         BGMPlayer.clip = Stage.BGM;
         count = new int[] { 0, 0 };
-        NoteChker.Add(new List<GameObject>());
-        NoteChker.Add(new List<GameObject>());
-        NoteChker.Add(new List<GameObject>());
-        NoteChker.Add(new List<GameObject>());
+        NoteChker.Add(new List<NoteBehavior>());
+        NoteChker.Add(new List<NoteBehavior>());
+        NoteChker.Add(new List<NoteBehavior>());
+        NoteChker.Add(new List<NoteBehavior>());
 
         maxchk = new int[] { Stage.N.Count, Stage.H.Count };
 
@@ -130,7 +130,7 @@ public class MusicPlayer : MonoBehaviour {
                         Data.EndTime = (Stage.H[count[k]].EndTime) * (RealTime) + Stage.offset;
                         Ob.transform.localScale = new Vector3(Ob.transform.localScale.x, ( Speed * ( (Stage.H[count[k]].EndTime - NoteTime[k])) * (RealTime) ) / HoldSize, 1);
                     }
-                    NoteChker[NoteLine[k]].Add(Ob);
+                    NoteChker[NoteLine[k]].Add(Data);
 
                     count[k] += 1;
                 }

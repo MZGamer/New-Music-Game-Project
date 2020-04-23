@@ -1873,7 +1873,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae0218562fa24b04e81ee4bbbe3b8b30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   Data: {fileID: 11400000, guid: 8a7c73f7098451c49b4ffbccb0538cee, type: 2}
+=======
+  Data: {fileID: 11400000, guid: 9e92187ba071ac94480281733ffcb678, type: 2}
+>>>>>>> f42461aac0a51be10721735b5e46e2522a224a57
   Stage:
     SongName: 
     Author: 
@@ -1899,7 +1903,7 @@ MonoBehaviour:
   Line1Mid: -325
   LineAndLine: 100
   BGMPlayer: {fileID: 23126499}
-  Speed: 500
+  Speed: 1000
   HoldSizeDis: 100
   NoteTop: 300
   NoteBottom: -200

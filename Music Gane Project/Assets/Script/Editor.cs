@@ -72,7 +72,10 @@ public class Editor : MusicPlayer
 
         EditorDataUpdate();
 
-
+        if (Input.GetKeyDown(KeyCode.Delete))
+        {
+            Delete();
+        }
 
 
     }
@@ -87,7 +90,7 @@ public class Editor : MusicPlayer
         if (Slected)
         {
             if (NoteChker[EditingData.line].Count - 1 >= EditingNoteIDonLine)
-                Editing = NoteChker[EditingData.line][EditingNoteIDonLine];
+                Editing = NoteChker[EditingData.line][EditingNoteIDonLine].gameObject;
         }
         EditingisHold = HoldInd;
         NoteIDonLine = EditingNoteIDonLine;
@@ -109,12 +112,12 @@ public class Editor : MusicPlayer
             DataChange = false;
         }
 
-        if ((BGMPlayer.clip.length + 1) / (StageTime + 1) > 0 || (BGMPlayer.clip.length + 1) / (StageTime + 1) < 1)
+        if ((BGMPlayer.clip.length ) / (StageTime ) > 0 || (BGMPlayer.clip.length ) / (StageTime ) < 1)
         {
             if (!Pause)
-                TimeControl.value = (StageTime + 1) / (BGMPlayer.clip.length + 1);
+                TimeControl.value = (StageTime ) / (BGMPlayer.clip.length );
             else
-                StageTime = (BGMPlayer.clip.length * TimeControl.value) - 1;
+                StageTime = (BGMPlayer.clip.length * TimeControl.value) ;
         }
         if(Input.GetAxis("Mouse ScrollWheel") > 0)
         {
@@ -159,15 +162,21 @@ public class Editor : MusicPlayer
             DataID.NoteData = NoteData;
             DataID.NoteIDinStageData = Stage.H.Count;
             Stage.H.Add(NoteData);
+            HoldInd = true;
         }
         else
         {
             DataID.NoteData = NoteData;
             DataID.NoteIDinStageData = Stage.N.Count;
             Stage.N.Add(NoteData);
+            HoldInd = false;
 
         }
-
+        EditingNoteIDonLine = DataID.NoteIDonLine;
+        EditingData = NoteData;
+        EditingNoteIDinStage = DataID.NoteIDinStageData;
+        DataChange = true;
+        Slected = true;
 
 
         NoteBehavior Data = Ob.GetComponent<NoteBehavior>();
@@ -179,7 +188,7 @@ public class Editor : MusicPlayer
             Data.EndTime = NoteData.EndTime * RealTime + Stage.offset;
         }
 
-        NoteChker[LineSlect].Add(Ob);
+        NoteChker[LineSlect].Add(Data);
     }
 
     public void Refresh()
