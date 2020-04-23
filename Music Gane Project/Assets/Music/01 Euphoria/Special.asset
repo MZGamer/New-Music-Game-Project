@@ -25,6 +25,8 @@ MonoBehaviour:
       line: 2
     - Time: 0.6875
       line: 2
+    - Time: 1.1875
+      line: 1
     H:
     - Time: 0
       line: 0
@@ -44,5 +46,9 @@ MonoBehaviour:
       EndTime: 0.9375
     - Time: 1
       line: 2
+      Miss: 0
+      EndTime: 1.4375
+    - Time: 1.25
+      line: 0
       Miss: 0
       EndTime: 1.4375

@@ -1,0 +1,1112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728f62afa78a4144dac21a4299a536a1, type: 3}
+  m_Name: Hard
+  m_EditorClassIdentifier: 
+  Song:
+    SongName: 
+    Author: 
+    SongImage: {fileID: 0}
+    BGM: {fileID: 8300000, guid: c1808ee524c45a944ae1c0b6424e2722, type: 3}
+    BPM: 198
+    offset: 1.993085
+    N:
+    - Time: -0.25
+      line: 1
+    - Time: -0.125
+      line: 1
+    - Time: 0
+      line: 1
+    - Time: 0
+      line: 2
+    - Time: 0.375
+      line: 0
+    - Time: 0.5
+      line: 1
+    - Time: 0.625
+      line: 2
+    - Time: 0.75
+      line: 3
+    - Time: 1
+      line: 1
+    - Time: 1
+      line: 2
+    - Time: 1.375
+      line: 3
+    - Time: 1.5
+      line: 2
+    - Time: 1.625
+      line: 1
+    - Time: 1.75
+      line: 0
+    - Time: 2
+      line: 1
+    - Time: 2
+      line: 2
+    - Time: 2.375
+      line: 0
+    - Time: 2.5
+      line: 3
+    - Time: 2.625
+      line: 1
+    - Time: 2.75
+      line: 2
+    - Time: 3
+      line: 0
+    - Time: 3
+      line: 3
+    - Time: 3.25
+      line: 0
+    - Time: 3.25
+      line: 3
+    - Time: 3.625
+      line: 1
+    - Time: 3.625
+      line: 2
+    - Time: 3.75
+      line: 0
+    - Time: 3.75
+      line: 3
+    - Time: 4
+      line: 1
+    - Time: 4
+      line: 2
+    - Time: 4.25
+      line: 0
+    - Time: 4.375
+      line: 3
+    - Time: 4.5
+      line: 3
+    - Time: 4.625
+      line: 0
+    - Time: 4.75
+      line: 0
+    - Time: 4.875
+      line: 1
+    - Time: 5
+      line: 2
+    - Time: 5.125
+      line: 3
+    - Time: 5.25
+      line: 2
+    - Time: 5.375
+      line: 1
+    - Time: 5.5
+      line: 0
+    - Time: 6
+      line: 1
+    - Time: 6
+      line: 2
+    - Time: 6.25
+      line: 3
+    - Time: 6.375
+      line: 0
+    - Time: 6.5
+      line: 0
+    - Time: 6.625
+      line: 3
+    - Time: 6.75
+      line: 3
+    - Time: 6.875
+      line: 2
+    - Time: 7
+      line: 1
+    - Time: 7.125
+      line: 0
+    - Time: 7.25
+      line: 1
+    - Time: 7.375
+      line: 2
+    - Time: 7.5
+      line: 3
+    - Time: 7.625
+      line: 1
+    - Time: 7.625
+      line: 2
+    - Time: 8
+      line: 1
+    - Time: 8
+      line: 2
+    - Time: 8.25
+      line: 1
+    - Time: 8.375
+      line: 2
+    - Time: 8.5
+      line: 2
+    - Time: 8.625
+      line: 1
+    - Time: 8.75
+      line: 3
+    - Time: 8.875
+      line: 0
+    - Time: 9
+      line: 2
+    - Time: 9.125
+      line: 1
+    - Time: 9.25
+      line: 2
+    - Time: 9.375
+      line: 0
+    - Time: 9.5
+      line: 3
+    - Time: 10
+      line: 1
+    - Time: 10
+      line: 2
+    - Time: 10.25
+      line: 2
+    - Time: 10.375
+      line: 1
+    - Time: 10.5
+      line: 2
+    - Time: 10.625
+      line: 0
+    - Time: 10.75
+      line: 3
+    - Time: 10.875
+      line: 1
+    - Time: 11
+      line: 2
+    - Time: 11.125
+      line: 0
+    - Time: 11.125
+      line: 1
+    - Time: 11.375
+      line: 2
+    - Time: 11.375
+      line: 3
+    - Time: 11.625
+      line: 0
+    - Time: 11.75
+      line: 1
+    - Time: 11.875
+      line: 2
+    - Time: 12
+      line: 0
+    - Time: 12
+      line: 3
+    - Time: 12.375
+      line: 3
+    - Time: 12.625
+      line: 0
+    - Time: 12.875
+      line: 3
+    - Time: 13
+      line: 0
+    - Time: 13.125
+      line: 2
+    - Time: 13.5
+      line: 3
+    - Time: 13.75
+      line: 3
+    - Time: 13.875
+      line: 2
+    - Time: 14
+      line: 1
+    - Time: 14.25
+      line: 0
+    - Time: 14.375
+      line: 1
+    - Time: 14.5
+      line: 2
+    - Time: 14.75
+      line: 3
+    - Time: 14.875
+      line: 1
+    - Time: 15.25
+      line: 0
+    - Time: 15.375
+      line: 3
+    - Time: 15.5
+      line: 1
+    - Time: 15.625
+      line: 3
+    - Time: 15.75
+      line: 0
+    - Time: 15.8125
+      line: 3
+    - Time: 15.875
+      line: 0
+    - Time: 16
+      line: 1
+    - Time: 16
+      line: 2
+    - Time: 16.375
+      line: 1
+    - Time: 16.625
+      line: 2
+    - Time: 16.875
+      line: 1
+    - Time: 17
+      line: 2
+    - Time: 17.125
+      line: 0
+    - Time: 17.5
+      line: 3
+    - Time: 17.75
+      line: 3
+    - Time: 17.875
+      line: 2
+    - Time: 18
+      line: 1
+    - Time: 18.25
+      line: 0
+    - Time: 18.375
+      line: 1
+    - Time: 18.5
+      line: 2
+    - Time: 18.75
+      line: 3
+    - Time: 18.875
+      line: 2
+    - Time: 19.25
+      line: 0
+    - Time: 19.375
+      line: 3
+    - Time: 19.5
+      line: 0
+    - Time: 19.625
+      line: 2
+    - Time: 19.6875
+      line: 0
+    - Time: 19.75
+      line: 2
+    - Time: 19.8125
+      line: 0
+    - Time: 19.875
+      line: 2
+    - Time: 20
+      line: 1
+    - Time: 20
+      line: 3
+    - Time: 20.375
+      line: 0
+    - Time: 20.375
+      line: 3
+    - Time: 20.625
+      line: 0
+    - Time: 20.625
+      line: 3
+    - Time: 20.875
+      line: 0
+    - Time: 21
+      line: 3
+    - Time: 21.125
+      line: 0
+    - Time: 21.5
+      line: 1
+    - Time: 21.75
+      line: 2
+    - Time: 21.875
+      line: 1
+    - Time: 22
+      line: 0
+    - Time: 22.25
+      line: 1
+    - Time: 22.375
+      line: 2
+    - Time: 22.5
+      line: 3
+    - Time: 22.75
+      line: 2
+    - Time: 22.875
+      line: 1
+    - Time: 23.25
+      line: 1
+    - Time: 23.375
+      line: 2
+    - Time: 23.75
+      line: 0
+    - Time: 23.8125
+      line: 2
+    - Time: 23.875
+      line: 1
+    - Time: 24
+      line: 0
+    - Time: 24
+      line: 2
+    - Time: 24.375
+      line: 1
+    - Time: 24.375
+      line: 2
+    - Time: 24.625
+      line: 1
+    - Time: 24.625
+      line: 2
+    - Time: 24.875
+      line: 1
+    - Time: 25
+      line: 2
+    - Time: 25.125
+      line: 1
+    - Time: 25.5
+      line: 1
+    - Time: 25.75
+      line: 1
+    - Time: 25.875
+      line: 2
+    - Time: 26
+      line: 3
+    - Time: 26.25
+      line: 2
+    - Time: 26.375
+      line: 1
+    - Time: 26.5
+      line: 0
+    - Time: 26.75
+      line: 1
+    - Time: 26.875
+      line: 2
+    - Time: 27.25
+      line: 2
+    - Time: 27.375
+      line: 1
+    - Time: 27.5
+      line: 2
+    - Time: 27.625
+      line: 0
+    - Time: 27.6875
+      line: 2
+    - Time: 27.75
+      line: 0
+    - Time: 27.8125
+      line: 2
+    - Time: 27.875
+      line: 0
+    - Time: 27.875
+      line: 3
+    - Time: 28
+      line: 1
+    - Time: 28.125
+      line: 0
+    - Time: 28.125
+      line: 3
+    - Time: 28.25
+      line: 2
+    - Time: 28.375
+      line: 0
+    - Time: 28.375
+      line: 3
+    - Time: 28.5
+      line: 1
+    - Time: 28.625
+      line: 0
+    - Time: 28.625
+      line: 3
+    - Time: 28.75
+      line: 2
+    - Time: 28.8125
+      line: 1
+    - Time: 28.875
+      line: 2
+    - Time: 29.25
+      line: 1
+    - Time: 29.375
+      line: 2
+    - Time: 29.5
+      line: 1
+    - Time: 29.625
+      line: 0
+    - Time: 29.625
+      line: 2
+    - Time: 29.875
+      line: 1
+    - Time: 29.875
+      line: 3
+    - Time: 30.125
+      line: 2
+    - Time: 30.375
+      line: 3
+    - Time: 30.5
+      line: 2
+    - Time: 30.75
+      line: 1
+    - Time: 31
+      line: 1
+    - Time: 31.25
+      line: 0
+    - Time: 31.875
+      line: 2
+    - Time: 32
+      line: 0
+    - Time: 32.125
+      line: 1
+    - Time: 32.375
+      line: 2
+    - Time: 32.5
+      line: 1
+    - Time: 32.875
+      line: 0
+    - Time: 33.375
+      line: 2
+    - Time: 33.875
+      line: 0
+    - Time: 34
+      line: 2
+    - Time: 34.375
+      line: 3
+    - Time: 34.875
+      line: 0
+    - Time: 35.25
+      line: 0
+    - Time: 35.25
+      line: 3
+    - Time: 35.875
+      line: 1
+    - Time: 36
+      line: 2
+    - Time: 36.125
+      line: 1
+    - Time: 36.125
+      line: 2
+    - Time: 36.25
+      line: 0
+    - Time: 36.375
+      line: 1
+    - Time: 36.375
+      line: 2
+    - Time: 36.5
+      line: 3
+    - Time: 36.625
+      line: 1
+    - Time: 36.625
+      line: 2
+    - Time: 36.75
+      line: 0
+    - Time: 36.8125
+      line: 3
+    - Time: 36.875
+      line: 0
+    - Time: 37.25
+      line: 3
+    - Time: 37.375
+      line: 0
+    - Time: 37.5
+      line: 3
+    - Time: 37.625
+      line: 0
+    - Time: 37.625
+      line: 1
+    - Time: 37.875
+      line: 2
+    - Time: 37.875
+      line: 3
+    - Time: 38.125
+      line: 3
+    - Time: 38.375
+      line: 1
+    - Time: 38.5
+      line: 3
+    - Time: 38.75
+      line: 2
+    - Time: 39
+      line: 1
+    - Time: 39.25
+      line: 0
+    - Time: 39.3125
+      line: 2
+    - Time: 39.375
+      line: 0
+    - Time: 39.625
+      line: 1
+    - Time: 39.625
+      line: 3
+    - Time: 39.8125
+      line: 0
+    - Time: 39.8125
+      line: 2
+    - Time: 40
+      line: 1
+    - Time: 40
+      line: 3
+    - Time: 40.625
+      line: 3
+    - Time: 40.75
+      line: 2
+    - Time: 40.875
+      line: 1
+    - Time: 41.5
+      line: 3
+    - Time: 41.625
+      line: 2
+    - Time: 41.75
+      line: 1
+    - Time: 41.875
+      line: 2
+    - Time: 42.125
+      line: 1
+    - Time: 42.25
+      line: 2
+    - Time: 42.375
+      line: 1
+    - Time: 42.5
+      line: 2
+    - Time: 42.625
+      line: 1
+    - Time: 42.6875
+      line: 2
+    - Time: 42.75
+      line: 0
+    - Time: 42.8125
+      line: 3
+    - Time: 42.875
+      line: 1
+    - Time: 42.9375
+      line: 2
+    - Time: 43
+      line: 0
+    - Time: 43.0625
+      line: 3
+    - Time: 43.125
+      line: 1
+    - Time: 43.125
+      line: 2
+    - Time: 43.25
+      line: 0
+    - Time: 43.25
+      line: 3
+    - Time: 43.375
+      line: 1
+    - Time: 43.375
+      line: 2
+    - Time: 43.5
+      line: 1
+    - Time: 43.5
+      line: 2
+    - Time: 43.875
+      line: 0
+    - Time: 43.875
+      line: 2
+    - Time: 44.125
+      line: 1
+    - Time: 44.125
+      line: 3
+    - Time: 44.5
+      line: 3
+    - Time: 44.625
+      line: 1
+    - Time: 44.75
+      line: 3
+    - Time: 44.875
+      line: 1
+    - Time: 45
+      line: 3
+    - Time: 45.125
+      line: 1
+    - Time: 45.5
+      line: 1
+    - Time: 45.875
+      line: 1
+    - Time: 45.875
+      line: 3
+    - Time: 46.125
+      line: 0
+    - Time: 46.125
+      line: 2
+    - Time: 46.5
+      line: 0
+    - Time: 46.625
+      line: 2
+    - Time: 46.75
+      line: 0
+    - Time: 46.875
+      line: 2
+    - Time: 47
+      line: 0
+    - Time: 47.125
+      line: 2
+    - Time: 47.5
+      line: 2
+    - Time: 47.875
+      line: 0
+    - Time: 48
+      line: 1
+    - Time: 48.125
+      line: 2
+    - Time: 48.375
+      line: 1
+    - Time: 49.25
+      line: 3
+    - Time: 49.5
+      line: 0
+    - Time: 49.5
+      line: 3
+    - Time: 49.875
+      line: 3
+    - Time: 50
+      line: 2
+    - Time: 50.125
+      line: 1
+    - Time: 50.375
+      line: 2
+    - Time: 51.25
+      line: 0
+    - Time: 51.875
+      line: 1
+    - Time: 51.875
+      line: 2
+    - Time: 52.125
+      line: 0
+    - Time: 52.125
+      line: 3
+    - Time: 52.5
+      line: 0
+    - Time: 52.625
+      line: 3
+    - Time: 52.6875
+      line: 0
+    - Time: 52.75
+      line: 3
+    - Time: 52.875
+      line: 0
+    - Time: 53
+      line: 3
+    - Time: 53.125
+      line: 1
+    - Time: 53.25
+      line: 2
+    - Time: 53.3125
+      line: 1
+    - Time: 53.375
+      line: 2
+    - Time: 53.875
+      line: 1
+    - Time: 53.875
+      line: 2
+    - Time: 54.125
+      line: 0
+    - Time: 54.125
+      line: 3
+    - Time: 54.5
+      line: 3
+    - Time: 54.625
+      line: 0
+    - Time: 54.6875
+      line: 3
+    - Time: 54.75
+      line: 0
+    - Time: 54.875
+      line: 3
+    - Time: 55
+      line: 0
+    - Time: 55.125
+      line: 2
+    - Time: 55.25
+      line: 1
+    - Time: 55.3125
+      line: 2
+    - Time: 55.375
+      line: 1
+    - Time: 55.875
+      line: 3
+    - Time: 56
+      line: 2
+    - Time: 56.125
+      line: 1
+    - Time: 56.875
+      line: 0
+    - Time: 57
+      line: 1
+    - Time: 57.125
+      line: 2
+    - Time: 57.75
+      line: 3
+    - Time: 57.875
+      line: 1
+    - Time: 58
+      line: 2
+    - Time: 58.125
+      line: 0
+    - Time: 58.125
+      line: 3
+    - Time: 58.375
+      line: 0
+    - Time: 58.5
+      line: 3
+    - Time: 58.75
+      line: 0
+    - Time: 60.5
+      line: 0
+    - Time: 60.5625
+      line: 1
+    - Time: 62.125
+      line: 0
+    - Time: 62.125
+      line: 3
+    - Time: 62.375
+      line: 3
+    - Time: 62.5
+      line: 0
+    - Time: 62.5625
+      line: 2
+    - Time: 62.625
+      line: 1
+    - Time: 62.75
+      line: 3
+    - Time: 62.875
+      line: 0
+    - Time: 62.875
+      line: 3
+    - Time: 63
+      line: 0
+    - Time: 63.125
+      line: 2
+    - Time: 63.25
+      line: 3
+    - Time: 63.3125
+      line: 1
+    - Time: 63.375
+      line: 2
+    - Time: 63.75
+      line: 2
+    - Time: 63.875
+      line: 1
+    - Time: 64
+      line: 2
+    - Time: 64.25
+      line: 0
+    - Time: 64.375
+      line: 0
+    - Time: 64.5
+      line: 0
+    - Time: 64.75
+      line: 3
+    - Time: 64.875
+      line: 3
+    - Time: 65
+      line: 3
+    - Time: 65.125
+      line: 0
+    - Time: 65.125
+      line: 3
+    - Time: 65.375
+      line: 0
+    - Time: 65.375
+      line: 3
+    - Time: 65.625
+      line: 0
+    - Time: 65.75
+      line: 1
+    - Time: 65.875
+      line: 2
+    - Time: 66.375
+      line: 0
+    - Time: 66.5
+      line: 1
+    - Time: 66.625
+      line: 2
+    - Time: 66.75
+      line: 3
+    - Time: 66.8125
+      line: 0
+    - Time: 66.875
+      line: 3
+    - Time: 67.375
+      line: 3
+    - Time: 67.5
+      line: 2
+    - Time: 67.625
+      line: 1
+    - Time: 67.75
+      line: 0
+    - Time: 67.8125
+      line: 2
+    - Time: 67.875
+      line: 0
+    - Time: 68.375
+      line: 0
+    - Time: 68.5
+      line: 3
+    - Time: 68.625
+      line: 1
+    - Time: 68.75
+      line: 2
+    - Time: 68.8125
+      line: 0
+    - Time: 68.875
+      line: 2
+    - Time: 69
+      line: 1
+    - Time: 69.25
+      line: 2
+    - Time: 69.5
+      line: 0
+    - Time: 69.5
+      line: 1
+    - Time: 69.75
+      line: 2
+    - Time: 69.75
+      line: 3
+    - Time: 70
+      line: 0
+    - Time: 70
+      line: 2
+    - Time: 70.25
+      line: 1
+    - Time: 70.25
+      line: 3
+    - Time: 70.5
+      line: 1
+    - Time: 70.5
+      line: 2
+    - Time: 70.75
+      line: 0
+    - Time: 70.75
+      line: 3
+    H:
+    - Time: 5.625
+      line: 1
+      Miss: 0
+      EndTime: 5.875
+    - Time: 7.75
+      line: 0
+      Miss: 0
+      EndTime: 7.875
+    - Time: 7.75
+      line: 3
+      Miss: 0
+      EndTime: 7.875
+    - Time: 9.625
+      line: 0
+      Miss: 0
+      EndTime: 9.875
+    - Time: 13.25
+      line: 1
+      Miss: 0
+      EndTime: 13.375
+    - Time: 15
+      line: 2
+      Miss: 0
+      EndTime: 15.75
+    - Time: 17.25
+      line: 2
+      Miss: 0
+      EndTime: 17.375
+    - Time: 19
+      line: 1
+      Miss: 0
+      EndTime: 19.625
+    - Time: 21.25
+      line: 3
+      Miss: 0
+      EndTime: 21.375
+    - Time: 23
+      line: 0
+      Miss: 0
+      EndTime: 23.125
+    - Time: 23.5
+      line: 3
+      Miss: 0
+      EndTime: 23.75
+    - Time: 25.25
+      line: 2
+      Miss: 0
+      EndTime: 25.375
+    - Time: 27
+      line: 3
+      Miss: 0
+      EndTime: 27.75
+    - Time: 29
+      line: 1
+      Miss: 0
+      EndTime: 29.125
+    - Time: 29
+      line: 2
+      Miss: 0
+      EndTime: 29.125
+    - Time: 30.125
+      line: 0
+      Miss: 0
+      EndTime: 30.75
+    - Time: 31
+      line: 3
+      Miss: 0
+      EndTime: 31.625
+    - Time: 31.375
+      line: 1
+      Miss: 0
+      EndTime: 31.625
+    - Time: 33
+      line: 3
+      Miss: 0
+      EndTime: 34
+    - Time: 33.5
+      line: 1
+      Miss: 0
+      EndTime: 34
+    - Time: 34.5
+      line: 2
+      Miss: 0
+      EndTime: 35.25
+    - Time: 35
+      line: 1
+      Miss: 0
+      EndTime: 35.25
+    - Time: 37
+      line: 0
+      Miss: 0
+      EndTime: 37.125
+    - Time: 37
+      line: 3
+      Miss: 0
+      EndTime: 37.125
+    - Time: 38.125
+      line: 0
+      Miss: 0
+      EndTime: 38.625
+    - Time: 39
+      line: 3
+      Miss: 0
+      EndTime: 39.375
+    - Time: 40.125
+      line: 0
+      Miss: 0
+      EndTime: 40.5
+    - Time: 40.125
+      line: 2
+      Miss: 0
+      EndTime: 40.5
+    - Time: 41
+      line: 0
+      Miss: 0
+      EndTime: 42.5
+    - Time: 42
+      line: 3
+      Miss: 0
+      EndTime: 42.5
+    - Time: 45.25
+      line: 3
+      Miss: 0
+      EndTime: 45.375
+    - Time: 47.25
+      line: 0
+      Miss: 0
+      EndTime: 47.375
+    - Time: 48.5
+      line: 2
+      Miss: 0
+      EndTime: 49.25
+    - Time: 48.75
+      line: 1
+      Miss: 0
+      EndTime: 49.25
+    - Time: 49
+      line: 0
+      Miss: 0
+      EndTime: 49.25
+    - Time: 50.5
+      line: 1
+      Miss: 0
+      EndTime: 51.25
+    - Time: 50.75
+      line: 2
+      Miss: 0
+      EndTime: 51.25
+    - Time: 51
+      line: 3
+      Miss: 0
+      EndTime: 51.25
+    - Time: 51.5
+      line: 0
+      Miss: 0
+      EndTime: 51.75
+    - Time: 51.5
+      line: 3
+      Miss: 0
+      EndTime: 51.75
+    - Time: 53.5
+      line: 1
+      Miss: 0
+      EndTime: 53.75
+    - Time: 55.5
+      line: 2
+      Miss: 0
+      EndTime: 55.75
+    - Time: 56.375
+      line: 0
+      Miss: 0
+      EndTime: 56.625
+    - Time: 56.5
+      line: 1
+      Miss: 0
+      EndTime: 56.75
+    - Time: 57.375
+      line: 3
+      Miss: 0
+      EndTime: 57.625
+    - Time: 57.5
+      line: 2
+      Miss: 0
+      EndTime: 57.75
+    - Time: 59
+      line: 3
+      Miss: 0
+      EndTime: 59.5
+    - Time: 59.25
+      line: 2
+      Miss: 0
+      EndTime: 59.75
+    - Time: 59.5
+      line: 1
+      Miss: 0
+      EndTime: 60
+    - Time: 59.75
+      line: 0
+      Miss: 0
+      EndTime: 60.25
+    - Time: 60
+      line: 3
+      Miss: 0
+      EndTime: 60.5
+    - Time: 60.625
+      line: 2
+      Miss: 0
+      EndTime: 62
+    - Time: 63.5
+      line: 0
+      Miss: 0
+      EndTime: 63.75
+    - Time: 63.5
+      line: 3
+      Miss: 0
+      EndTime: 63.75
+    - Time: 64.125
+      line: 2
+      Miss: 0
+      EndTime: 64.625
+    - Time: 64.625
+      line: 1
+      Miss: 0
+      EndTime: 65.125
+    - Time: 66
+      line: 3
+      Miss: 0
+      EndTime: 66.25
+    - Time: 67
+      line: 0
+      Miss: 0
+      EndTime: 67.25
+    - Time: 68
+      line: 1
+      Miss: 0
+      EndTime: 68.25
+    - Time: 68
+      line: 2
+      Miss: 0
+      EndTime: 68.25
+    - Time: 71
+      line: 1
+      Miss: 0
+      EndTime: 71.25
+    - Time: 71
+      line: 2
+      Miss: 0
+      EndTime: 71.25
