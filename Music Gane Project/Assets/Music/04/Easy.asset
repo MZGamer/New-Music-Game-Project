@@ -1,0 +1,370 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728f62afa78a4144dac21a4299a536a1, type: 3}
+  m_Name: Easy
+  m_EditorClassIdentifier: 
+  Song:
+    SongName: 
+    Author: 
+    SongImage: {fileID: 0}
+    BGM: {fileID: 8300000, guid: d763ed4272052ad44815d3560fed55a1, type: 3}
+    BPM: 180
+    offset: 1.3223
+    N:
+    - Time: 0
+      line: 1
+    - Time: 0
+      line: 3
+    - Time: 1
+      line: 0
+    - Time: 1
+      line: 2
+    - Time: 2
+      line: 1
+    - Time: 2
+      line: 3
+    - Time: 3
+      line: 0
+    - Time: 3
+      line: 2
+    - Time: 4
+      line: 1
+    - Time: 4
+      line: 2
+    - Time: 4.25
+      line: 0
+    - Time: 4.5
+      line: 1
+    - Time: 4.75
+      line: 2
+    - Time: 5
+      line: 3
+    - Time: 5.25
+      line: 3
+    - Time: 5.5
+      line: 2
+    - Time: 5.75
+      line: 3
+    - Time: 6
+      line: 0
+    - Time: 6.25
+      line: 1
+    - Time: 6.5
+      line: 0
+    - Time: 6.75
+      line: 1
+    - Time: 7
+      line: 2
+    - Time: 7.25
+      line: 3
+    - Time: 7.5
+      line: 2
+    - Time: 7.75
+      line: 1
+    - Time: 8
+      line: 3
+    - Time: 8.25
+      line: 1
+    - Time: 8.5
+      line: 3
+    - Time: 8.75
+      line: 1
+    - Time: 9
+      line: 3
+    - Time: 9.25
+      line: 1
+    - Time: 9.5
+      line: 0
+    - Time: 9.75
+      line: 2
+    - Time: 10
+      line: 0
+    - Time: 10.25
+      line: 2
+    - Time: 10.5
+      line: 0
+    - Time: 10.75
+      line: 2
+    - Time: 11
+      line: 1
+    - Time: 11
+      line: 2
+    - Time: 11.25
+      line: 0
+    - Time: 11.25
+      line: 3
+    - Time: 12
+      line: 1
+    - Time: 12
+      line: 2
+    - Time: 12.25
+      line: 0
+    - Time: 12.25
+      line: 3
+    - Time: 12.5
+      line: 0
+    - Time: 12.5
+      line: 3
+    - Time: 12.75
+      line: 0
+    - Time: 12.75
+      line: 3
+    - Time: 13
+      line: 3
+    - Time: 13.25
+      line: 2
+    - Time: 13.5
+      line: 3
+    - Time: 13.75
+      line: 2
+    - Time: 14
+      line: 0
+    - Time: 14.25
+      line: 1
+    - Time: 14.5
+      line: 0
+    - Time: 14.75
+      line: 1
+    - Time: 15
+      line: 3
+    - Time: 15.25
+      line: 2
+    - Time: 15.5
+      line: 3
+    - Time: 15.75
+      line: 2
+    - Time: 16
+      line: 1
+    - Time: 16
+      line: 2
+    - Time: 16.25
+      line: 0
+    - Time: 16.25
+      line: 3
+    - Time: 16.5
+      line: 1
+    - Time: 16.5
+      line: 2
+    - Time: 16.75
+      line: 0
+    - Time: 16.75
+      line: 3
+    - Time: 19.5
+      line: 1
+    - Time: 19.5
+      line: 2
+    - Time: 20
+      line: 1
+    - Time: 20.25
+      line: 1
+    - Time: 20.75
+      line: 2
+    - Time: 21
+      line: 2
+    - Time: 21.75
+      line: 0
+    - Time: 22
+      line: 2
+    - Time: 22.75
+      line: 0
+    - Time: 23
+      line: 1
+    - Time: 23.25
+      line: 2
+    - Time: 23.5
+      line: 3
+    - Time: 23.75
+      line: 2
+    - Time: 24.5
+      line: 2
+    - Time: 24.5
+      line: 3
+    - Time: 24.75
+      line: 3
+    - Time: 25
+      line: 2
+    - Time: 25.25
+      line: 3
+    - Time: 25.5
+      line: 0
+    - Time: 25.5
+      line: 2
+    - Time: 25.75
+      line: 1
+    - Time: 25.75
+      line: 3
+    - Time: 28
+      line: 1
+    - Time: 28
+      line: 2
+    - Time: 28.25
+      line: 3
+    - Time: 28.5
+      line: 2
+    - Time: 28.75
+      line: 1
+    - Time: 29
+      line: 0
+    - Time: 29
+      line: 2
+    - Time: 29.5
+      line: 1
+    - Time: 29.5
+      line: 2
+    - Time: 29.75
+      line: 0
+    - Time: 30
+      line: 1
+    - Time: 30
+      line: 2
+    - Time: 30.25
+      line: 3
+    - Time: 30.5
+      line: 2
+    - Time: 30.75
+      line: 1
+    - Time: 32
+      line: 0
+    - Time: 32
+      line: 3
+    - Time: 33
+      line: 0
+    - Time: 33
+      line: 3
+    - Time: 33.75
+      line: 1
+    - Time: 34
+      line: 1
+    H:
+    - Time: 8
+      line: 0
+      Miss: 0
+      EndTime: 8.25
+    - Time: 8.5
+      line: 0
+      Miss: 0
+      EndTime: 8.75
+    - Time: 9
+      line: 0
+      Miss: 0
+      EndTime: 9.25
+    - Time: 9.5
+      line: 3
+      Miss: 0
+      EndTime: 9.75
+    - Time: 10
+      line: 3
+      Miss: 0
+      EndTime: 10.25
+    - Time: 10.5
+      line: 3
+      Miss: 0
+      EndTime: 10.75
+    - Time: 11.5
+      line: 0
+      Miss: 0
+      EndTime: 11.75
+    - Time: 11.5
+      line: 3
+      Miss: 0
+      EndTime: 11.75
+    - Time: 13
+      line: 0
+      Miss: 0
+      EndTime: 13.75
+    - Time: 14
+      line: 3
+      Miss: 0
+      EndTime: 14.75
+    - Time: 15
+      line: 0
+      Miss: 0
+      EndTime: 15.75
+    - Time: 17
+      line: 1
+      Miss: 0
+      EndTime: 17.75
+    - Time: 17
+      line: 2
+      Miss: 0
+      EndTime: 17.75
+    - Time: 18
+      line: 0
+      Miss: 0
+      EndTime: 18.25
+    - Time: 18
+      line: 3
+      Miss: 0
+      EndTime: 18.25
+    - Time: 18.5
+      line: 1
+      Miss: 0
+      EndTime: 18.75
+    - Time: 18.5
+      line: 2
+      Miss: 0
+      EndTime: 18.75
+    - Time: 19
+      line: 0
+      Miss: 0
+      EndTime: 19.25
+    - Time: 19
+      line: 3
+      Miss: 0
+      EndTime: 19.25
+    - Time: 20
+      line: 2
+      Miss: 0
+      EndTime: 20.25
+    - Time: 20.75
+      line: 1
+      Miss: 0
+      EndTime: 21
+    - Time: 21.75
+      line: 3
+      Miss: 0
+      EndTime: 22
+    - Time: 22
+      line: 1
+      Miss: 0
+      EndTime: 22.5
+    - Time: 24
+      line: 0
+      Miss: 0
+      EndTime: 24.5
+    - Time: 24
+      line: 1
+      Miss: 0
+      EndTime: 24.5
+    - Time: 26
+      line: 0
+      Miss: 0
+      EndTime: 26.25
+    - Time: 26
+      line: 2
+      Miss: 0
+      EndTime: 26.25
+    - Time: 26.5
+      line: 3
+      Miss: 0
+      EndTime: 27.5
+    - Time: 26.75
+      line: 0
+      Miss: 0
+      EndTime: 27.5
+    - Time: 31
+      line: 2
+      Miss: 0
+      EndTime: 31.5
+    - Time: 31.5
+      line: 1
+      Miss: 0
+      EndTime: 32

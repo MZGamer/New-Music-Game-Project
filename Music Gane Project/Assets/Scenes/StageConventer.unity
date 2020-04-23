@@ -140,8 +140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c78c4ad48678f42459ab65e64722a712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OldStage: {fileID: 11400000, guid: 003eee7c3d7d1cd4b9a4413ba09a8f3d, type: 2}
-  NewStage: {fileID: 11400000, guid: ace66aafc7bc0b0458649644099d52ca, type: 2}
+  OldStage: {fileID: 11400000, guid: d587695cbfcf6444fa722bc4f8210ae1, type: 2}
+  NewStage: {fileID: 11400000, guid: 9e92187ba071ac94480281733ffcb678, type: 2}
 --- !u!4 &207364954
 Transform:
   m_ObjectHideFlags: 0
