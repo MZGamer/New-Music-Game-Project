@@ -26,7 +26,7 @@ public class NoteBehavior : MonoBehaviour {
         else if (arrivetime - MusicPlayer.StageTime > -1 && !isHold)
             Move();
         else
-            transform.localPosition = new Vector2(transform.localPosition.x, -1500);
+            transform.localPosition = new Vector2(transform.localPosition.x, -3000);
 
     }
 
