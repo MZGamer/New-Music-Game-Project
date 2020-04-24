@@ -8,6 +8,7 @@ public class MusicPlayer : MonoBehaviour {
     public SongDifficultyCreate Data;
     public StageData Stage;
     public List<List<NoteBehavior>> NoteChker = new List<List<NoteBehavior>>();
+    public int StageMaxCombo;
 
     [Header("ObjectNeedCreate")]
     public List<Transform> NoteFile = new List<Transform>();
@@ -74,6 +75,7 @@ public class MusicPlayer : MonoBehaviour {
 
         RealTime = (240F / Stage.BPM);
         BGMPlayer.PlayDelayed(1);
+        StageMaxCombo = Stage.N.Count + Stage.H.Count;
     }
 
 

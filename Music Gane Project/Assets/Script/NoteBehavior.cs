@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NoteBehavior : MonoBehaviour {
     public float arrivetime,EndTime;
-    public bool isHold;
+    public bool isHold,click;
     public void Start()
     {
         Note_Start();
