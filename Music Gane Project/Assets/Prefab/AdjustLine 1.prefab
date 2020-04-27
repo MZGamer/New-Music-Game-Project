@@ -55,6 +55,7 @@ MonoBehaviour:
   arrivetime: 0
   EndTime: 0
   isHold: 0
+  click: 0
 --- !u!212 &212100592279934788
 SpriteRenderer:
   m_ObjectHideFlags: 1

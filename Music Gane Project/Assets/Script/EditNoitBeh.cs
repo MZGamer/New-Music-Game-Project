@@ -13,8 +13,8 @@ public class EditNoitBeh : NoteBehavior {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
-        Note_FixedUpdate();
+	void Update () {
+        Note_Update();
         if(isHold)
             transform.localScale = new Vector3(1, (MusicPlayer.MoveSpeed * (EndTime - arrivetime)) / MusicPlayer.HoldSize, 1);
     }

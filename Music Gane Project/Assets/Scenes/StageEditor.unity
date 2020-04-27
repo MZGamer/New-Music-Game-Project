@@ -1875,7 +1875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae0218562fa24b04e81ee4bbbe3b8b30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Data: {fileID: 11400000, guid: 8a7c73f7098451c49b4ffbccb0538cee, type: 2}
+  Data: {fileID: 11400000, guid: ace66aafc7bc0b0458649644099d52ca, type: 2}
   Stage:
     SongName: 
     Author: 
@@ -1885,6 +1885,7 @@ MonoBehaviour:
     offset: 0
     N: []
     H: []
+  StageMaxCombo: 0
   NoteFile:
   - {fileID: 436192944}
   - {fileID: 2111426373}

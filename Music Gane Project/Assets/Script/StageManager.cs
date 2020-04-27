@@ -58,17 +58,7 @@ public class StageManager : MusicPlayer
                 {
                     int[] Playing = { Perfect, Good };
                     float[] TimeChk = { PerfectTime, GoodTime };
-                    if (Data.arrivetime - StageTime > GoodTime)
-                    {
-                        Data.click = true;
-                        Destroy(Data.gameObject);
-                        ChkCount[i]++;
-                        Miss++;
-                        Combo = 0;
-                        Debug.Log("ClickEarly");
-                    }
-                    else
-                    {
+
                         for (int k = 0; k < 2; k++)
                         {
                             if (Mathf.Abs(StageTime - Data.arrivetime) < TimeChk[k])
@@ -92,7 +82,7 @@ public class StageManager : MusicPlayer
                         Debug.Log("Hit" + "Line: " + i);
                         Perfect = Playing[0];
                         Good = Playing[1];
-                    }
+
                 }
             }
         }
@@ -135,8 +125,8 @@ public class StageManager : MusicPlayer
     
     void PlayingInfUpdate()
     {
-        float PerNoteScore = 800000F / StageMaxCombo;
-        float PerMaxComboScore = 200000F / StageMaxCombo;
+        float PerNoteScore = 900000F / StageMaxCombo;
+        float PerMaxComboScore = 100000F / StageMaxCombo;
         if (Combo > MaxCombo)
             MaxCombo = Combo;
 

@@ -9,9 +9,9 @@ public class NoteBehavior : MonoBehaviour {
     {
         Note_Start();
     }
-    public void FixedUpdate()
+    public void Update()
     {
-        Note_FixedUpdate();
+        Note_Update();
     }
 
     // Use this for initialization
@@ -20,7 +20,7 @@ public class NoteBehavior : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	public void Note_FixedUpdate () {
+	public void Note_Update () {
         if (isHold && EndTime - MusicPlayer.StageTime > -1)
             Move();
         else if (arrivetime - MusicPlayer.StageTime > -1 && !isHold)
@@ -28,6 +28,13 @@ public class NoteBehavior : MonoBehaviour {
         else
             transform.localPosition = new Vector2(transform.localPosition.x, -3000);
 
+    }
+    private void FixedUpdate()
+    {
+        if(MusicPlayer.StageTime > arrivetime + 0.5f)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void Move()
