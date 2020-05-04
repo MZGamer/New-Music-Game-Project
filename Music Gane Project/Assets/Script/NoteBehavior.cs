@@ -31,10 +31,21 @@ public class NoteBehavior : MonoBehaviour {
     }
     private void FixedUpdate()
     {
-        if(MusicPlayer.StageTime > arrivetime + 0.5f)
+        if (!isHold)
         {
-            Destroy(gameObject);
+            if (MusicPlayer.StageTime > arrivetime + 0.5f)
+            {
+                Destroy(gameObject);
+            }
         }
+        else
+        {
+            if (MusicPlayer.StageTime > EndTime + 0.5f)
+            {
+                Destroy(gameObject);
+            }
+        }
+
     }
 
     public void Move()

@@ -18,7 +18,10 @@ public class EditNoitBeh : NoteBehavior {
         if(isHold)
             transform.localScale = new Vector3(1, (MusicPlayer.MoveSpeed * (EndTime - arrivetime)) / MusicPlayer.HoldSize, 1);
     }
-
+    private void FixedUpdate()
+    {
+        
+    }
     public void BottomBeh()
     {
         Editor.EditingNoteIDonLine = NoteIDonLine;
