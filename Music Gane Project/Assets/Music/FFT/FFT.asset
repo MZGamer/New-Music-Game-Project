@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728f62afa78a4144dac21a4299a536a1, type: 3}
+  m_Name: FFT
+  m_EditorClassIdentifier: 
+  Song:
+    SongName: FFT
+    Author: cybermiso
+    SongImage: {fileID: 21300000, guid: 0d74d111c3e39bd468cf8339bfd02123, type: 3}
+    BGM: {fileID: 8300000, guid: 5558f803a99d09f49a0896b9eb187b60, type: 3}
+    BPM: 180
+    offset: 0.71
+    N:
+    - Time: 0.625
+      line: 2
+    - Time: 0
+      line: 3
+    - Time: 0.25
+      line: 3
+    - Time: 0.375
+      line: 2
+    - Time: 1.125
+      line: 2
+    - Time: 0.75
+      line: 1
+    - Time: 1
+      line: 1
+    - Time: 1.375
+      line: 2
+    - Time: 1.5
+      line: 3
+    - Time: 1.75
+      line: 3
+    - Time: 1.75
+      line: 2
+    - Time: 2
+      line: 0
+    - Time: 2.25
+      line: 0
+    - Time: 2.375
+      line: 1
+    - Time: 2.625
+      line: 1
+    - Time: 2.75
+      line: 2
+    - Time: 3
+      line: 2
+    - Time: 3.125
+      line: 1
+    - Time: 3.375
+      line: 1
+    - Time: 3.5
+      line: 0
+    - Time: 3.75
+      line: 0
+    - Time: 4
+      line: 2
+    - Time: 4.25
+      line: 2
+    - Time: 4.375
+      line: 3
+    - Time: 4.625
+      line: 3
+    - Time: 4.75
+      line: 2
+    - Time: 5
+      line: 1
+    - Time: 5.25
+      line: 1
+    - Time: 5.375
+      line: 0
+    - Time: 5.625
+      line: 0
+    - Time: 5.75
+      line: 1
+    - Time: 6.25
+      line: 0
+    - Time: 6.75
+      line: 3
+    - Time: 7
+      line: 0
+    - Time: 7.0625
+      line: 1
+    - Time: 7.125
+      line: 2
+    - Time: 7.25
+      line: 1
+    - Time: 7.3125
+      line: 2
+    - Time: 7.375
+      line: 3
+    - Time: 7.5
+      line: 0
+    - Time: 7.5625
+      line: 1
+    - Time: 7.625
+      line: 2
+    - Time: 7.75
+      line: 1
+    - Time: 7.8125
+      line: 2
+    - Time: 7.875
+      line: 3
+    H:
+    - Time: 0
+      line: 0
+      Miss: 0
+      EndTime: 1.75
+    - Time: 2
+      line: 3
+      Miss: 0
+      EndTime: 3.75
+    - Time: 4
+      line: 1
+      Miss: 0
+      EndTime: 4.75
+    - Time: 5
+      line: 2
+      Miss: 0
+      EndTime: 5.75
