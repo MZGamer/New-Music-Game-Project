@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f9d67e657a88944a70d65202666396, type: 3}
+  m_Name: FFT(pan)
+  m_EditorClassIdentifier: 
+  Stage:
+    Notes: []
+    BGM: {fileID: 8300000, guid: 5558f803a99d09f49a0896b9eb187b60, type: 3}
+    songtime: 137
+    BPM: 180
+    FullCombo: 0
+    Offset: 0
+    SongName: FFT
+    Author: cybermiso
+    SongImage: {fileID: 21300000, guid: 0d74d111c3e39bd468cf8339bfd02123, type: 3}
+    level: 
