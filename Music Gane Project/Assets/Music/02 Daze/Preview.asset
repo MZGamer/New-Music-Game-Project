@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35029276ef46a914ba968a7b6f4fa1df, type: 3}
+  m_Name: Preview
+  m_EditorClassIdentifier: 
+  Song:
+    SongName: DAZE
+    Author: Jin
+    SongImage: {fileID: 0}
+    BGM: {fileID: 0}
+    BPM: 198
+    SongID: 2
+    Diff:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 11400000, guid: ace66aafc7bc0b0458649644099d52ca, type: 2}
+    - {fileID: 0}

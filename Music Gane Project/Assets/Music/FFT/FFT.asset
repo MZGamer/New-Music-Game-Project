@@ -4,7 +4,8 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -19,20 +20,20 @@ MonoBehaviour:
     BPM: 180
     offset: 0.71
     N:
-    - Time: 0.625
-      line: 2
     - Time: 0
       line: 3
     - Time: 0.25
       line: 3
     - Time: 0.375
       line: 2
-    - Time: 1.125
+    - Time: 0.625
       line: 2
     - Time: 0.75
       line: 1
     - Time: 1
       line: 1
+    - Time: 1.125
+      line: 2
     - Time: 1.375
       line: 2
     - Time: 1.5
